@@ -5,6 +5,22 @@
 #define RCC_HSE  1
 #define RCC_PLL  2
 
+#define RCC__CR_HSION            0
+#define RCC__CR_HSIRDY           1
+#define RCC__CR_HSEON            16
+#define RCC__CR_HSERDY           17
+#define RCC__CR_HSEBYP           18
+#define RCC__CR_CSSON            19
+#define RCC__CR_PLLON            24
+#define RCC__CR_PLLRDY           25
+#define RCC__CR_PLLI2SON         26
+#define RCC__CR_PLLISRDY         27
+
+
+#define RCC_PLLCFGR_           
+
+
+
 #define RCC_AHB_GPIOAEN       0
 #define RCC_AHB_GPIOBEN       1
 #define RCC_AHB_GPIOCEN       2

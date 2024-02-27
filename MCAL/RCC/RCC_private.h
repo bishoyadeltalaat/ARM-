@@ -9,6 +9,11 @@
 #define RCC_AHB_DIV_2             0b1000
 #define RCC_AHB_DIV_4             0b1001
 #define RCC_AHB_DIV_8             0b1010
+#define RCC_AHB_DIV_16            0b1011
+#define RCC_AHB_DIV_64            0b1100
+#define RCC_AHB_DIV_128           0b1101
+#define RCC_AHB_DIV_256           0b1110
+#define RCC_AHB_DIV_512           0b1111
 
 #define RCC_APB1_DIV_1             0b000
 #define RCC_APB1_DIV_2             0b100
@@ -25,12 +30,15 @@
 
 
 
-#define RCC_AHB_PRESCALER_MASK    0b1111  
-#define RCC_APB1_PRESCALER_MASK   0b111 
-#define RCC_APB2_PRESCALER_MASK   0b111 
+#define RCC_AHB_PRESCALER_MASK     0b1111  
+#define RCC_APB1_PRESCALER_MASK    0b111 
+#define RCC_APB2_PRESCALER_MASK    0b111 
 
 
 #define RCC BASE ADDRESS     0x40023800
+
+
+
 #define RCC_CR              *((volatile u32 *) (RCC_BASE_ADDRESS + 0x00))
 #define RCC_PLLCFGR         *((volatile u32 *) (RCC_BASE_ADDRESS + 0x04))
 #define RCC_CFGR            *((volatile u32 *) (RCC_BASE_ADDRESS + 0x08))
