@@ -67,16 +67,16 @@ void RCC_voidInit(void)
 	#endif
 	
     //AHB Prescaler Settings
-    RCC_CR &= ~(RCC_AHB_PRESCALER_MASK << 4);
-    RCC_CR |= (RCC_AHB_PRESCALER << 4);
+    RCC_CFGR &= ~(RCC_AHB_PRESCALER_MASK << 4);
+    RCC_CFGR |= (RCC_AHB_PRESCALER << 4);
 	
     //APB1 Prescaler Settings
-    RCC_CR &= ~(RCC_APB1_PRESCALER_MASK << 10);
-    RCC_CR |= (RCC_APB1_PRESCALER << 10);
+    RCC_CFGR &= ~(RCC_APB1_PRESCALER_MASK << 10);
+    RCC_CFGR |= (RCC_APB1_PRESCALER << 10);
 	
     //APB2 Prescaler Settings
-    RCC_CR &= ~(RCC_APB2_PRESCALER_MASK << 13);
-    RCC_CR |= (RCC_APB2_PRESCALER << 13);
+    RCC_CFGR &= ~(RCC_APB2_PRESCALER_MASK << 13);
+    RCC_CFGR |= (RCC_APB2_PRESCALER << 13);
 	
 }
 
