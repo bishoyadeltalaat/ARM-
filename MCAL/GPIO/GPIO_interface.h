@@ -4,7 +4,7 @@
  * Version:				v1.0
  * Compiler:			GNU ARM-GCC
  * Controller:			STM32F401CCU6
- * Layer:				MCAL
+ * Layer:				MCAL 
  ********************************************/
 /*********************************************
  * Version	  Date				  Author				  Description
@@ -14,17 +14,21 @@
 #define GPIO_INTERFACE_H
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Pins */
+void GPIO_voidSetPinMode();
+void GPIO_voidSetPinOutputMode();
+void GPIO_voidSetPinOutputSpeed();
+void GPIO_voidSetPinValue();
+void GPIO_voidSetPullUpDownResistor();
+u8 GPIO_u8GetPinValue();
+void GPIO_voidLockPine();
+/*****************************************************/
+/* Ports */
+void GPIO_voidSetPortMode();
+void GPIO_voidSetPortOutputMode();
+void GPIO_voidSetPortOutputSpeed();
+void GPIO_voidSetPortValue();
+u8 GPIO_u8GetPortValue();
+void GPIO_voidLockPort();
 
 #endif 
