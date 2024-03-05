@@ -28,6 +28,8 @@
 #define		GPIOA_ODR				*((volatile u32*)(GPIOA_BASE_ADDRESS + 0x14))
 #define		GPIOA_BSRR				*((volatile u32*)(GPIOA_BASE_ADDRESS + 0x18))
 #define		GPIOA_LCKR				*((volatile u32*)(GPIOA_BASE_ADDRESS + 0x1C))
+#define		GPIOA_AFRL				*((volatile u32*)(GPIOA_BASE_ADDRESS + 0x20))
+#define		GPIOA_AFRHY				*((volatile u32*)(GPIOA_BASE_ADDRESS + 0x24))
 
 /************************* GPIOB Registers *************************/
 #define		GPIOB_MODER				*((volatile u32*)(GPIOB_BASE_ADDRESS + 0x00))
@@ -38,6 +40,9 @@
 #define		GPIOB_ODR				*((volatile u32*)(GPIOB_BASE_ADDRESS + 0x14))
 #define		GPIOB_BSRR				*((volatile u32*)(GPIOB_BASE_ADDRESS + 0x18))
 #define		GPIOB_LCKR				*((volatile u32*)(GPIOB_BASE_ADDRESS + 0x1C))
+#define		GPIOB_AFRL				*((volatile u32*)(GPIOB_BASE_ADDRESS + 0x20))
+#define		GPIOB_AFRHY				*((volatile u32*)(GPIOB_BASE_ADDRESS + 0x24))
+
 
 /************************* GPIOC Registers *************************/
 #define		GPIOC_MODER				*((volatile u32*)(GPIOC_BASE_ADDRESS + 0x00))
@@ -48,7 +53,8 @@
 #define		GPIOC_ODR				*((volatile u32*)(GPIOC_BASE_ADDRESS + 0x14))
 #define		GPIOC_BSRR				*((volatile u32*)(GPIOC_BASE_ADDRESS + 0x18))
 #define		GPIOC_LCKR				*((volatile u32*)(GPIOC_BASE_ADDRESS + 0x1C))
-
+#define		GPIOC_AFRL				*((volatile u32*)(GPIOC_BASE_ADDRESS + 0x20))
+#define		GPIOC_AFRHY				*((volatile u32*)(GPIOC_BASE_ADDRESS + 0x24))
 
 /************************* GPIO Modes *************************/
 #define GPIO_InputMode          00
