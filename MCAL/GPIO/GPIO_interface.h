@@ -1,7 +1,7 @@
 /*********************************************
  * Author:                Bishoy Adel
- * Creation Data:         1 Mar, 2024
- * Version:               v1.0
+ * Creation Data:         9 Mar, 2024
+ * Version:               v1.2
  * Compiler:              GNU ARM-GCC
  * Controller:            STM32F401CCU6
  * Layer:                 MCAL 
@@ -9,14 +9,13 @@
 
 /*********************************************
  * Version     Date                  Author                  Description
- * v1.0        1 Mar, 2024           Bishoy Adel             Initial Creation
+ * v1.2        9 Mar, 2024           Bishoy Adel             Initial Creation
 *********************************************/
 
 #ifndef GPIO_INTERFACE_H
 #define GPIO_INTERFACE_H
 
 /* Enums for GPIO configurations */
-
 typedef enum{
     GPIO_PORTA=0 ,      // GPIO Port A
     GPIO_PORTB,         // GPIO Port B
@@ -67,21 +66,21 @@ typedef enum{
 }GPIO_Value_e ;
 
 /* Pins */
-void GPIO_voidSetPinMode(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_Mode_e pinMODE ); // Set pin mode
-void GPIO_voidSetPinOutputMode(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_OutputMode_e pinOutputMODE); // Set pin output mode
-void GPIO_voidSetPinOutputSpeed(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_OutputSpeed_e pinOutputSpeed); // Set pin output speed
-void GPIO_voidSetPinValue(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_Value_e pinValue); // Set pin value
+void MGPIO_voidSetPinMode(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_Mode_e pinMODE ); // Set pin mode
+void MGPIO_voidSetPinOutputMode(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_OutputMode_e pinOutputMODE); // Set pin output mode
+void MGPIO_voidSetPinOutputSpeed(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_OutputSpeed_e pinOutputSpeed); // Set pin output speed
+void MGPIO_voidSetPinValue(GPIO_PORT_e portID, GPIO_PIN_e pinID ,GPIO_Value_e pinValue); // Set pin value
 //void GPIO_voidSetPullUpDownResistor(GPIO_PORT_e portID, GPIO_PIN_e pinID ,); // Set pull-up/pull-down resistor
-u8 GPIO_u8GetPinValue(GPIO_PORT_e pinID , GPIO_PIN_e pinID); // Get pin value
-void GPIO_voidLockPine(GPIO_PORT_e pinID , GPIO_PIN_e pinID); // Lock pin configuration
+u16 MGPIO_u8GetPinValue(GPIO_PORT_e portID , GPIO_PIN_e pinID); // Get pin value
+void MGPIO_voidLockPine(GPIO_PORT_e portID , GPIO_PIN_e pinID); // Lock pin configuration
 
 /*****************************************************/
 /* Ports */
-void GPIO_voidSetPortMode(GPIO_PORT_e portID,GPIO_Mode_e portMODE); // Set port mode
-void GPIO_voidSetPortOutputMode(GPIO_PORT_e portID,GPIO_OutputMode_e portOutputMODE); // Set port output mode
-void GPIO_voidSetPortOutputSpeed(GPIO_PORT_e portID,GPIO_OutputSpeed_e portOutputSpeed); // Set port output speed
-void GPIO_voidSetPortValue(GPIO_PORT_e portID,GPIO_Value_e portValue); // Set port value
-u8 GPIO_u8GetPortValue(GPIO_PORT_e pinID); // Get port value
-void GPIO_voidLockPort(GPIO_PORT_e pinID); // Lock port configuration
+void MGPIO_voidSetPortMode(GPIO_PORT_e portID,GPIO_Mode_e portMODE); // Set port mode
+void MGPIO_voidSetPortOutputMode(GPIO_PORT_e portID,GPIO_OutputMode_e portOutputMODE); // Set port output mode
+void MGPIO_voidSetPortOutputSpeed(GPIO_PORT_e portID,GPIO_OutputSpeed_e portOutputSpeed); // Set port output speed
+void MGPIO_voidSetPortValue(GPIO_PORT_e portID,GPIO_Value_e portValue); // Set port value
+u16 MGPIO_u8GetPortValue(GPIO_PORT_e pinID); // Get port value
+void MGPIO_voidLockPort(GPIO_PORT_e pinID); // Lock port configuration
 
 #endif 

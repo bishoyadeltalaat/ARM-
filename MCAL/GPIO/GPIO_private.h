@@ -1,19 +1,22 @@
 /*********************************************
  * Author:				Bishoy Adel
- * Creation Data:		1 Mar, 2024
- * Version:				v1.0
+ * Creation Data:		9 Mar, 2024
+ * Version:				v1.2
  * Compiler:			GNU ARM-GCC
  * Controller:			STM32F401CCU6
  * Layer:				MCAL
  ********************************************/
 /*********************************************
  * Version	  Date				  Author				  Description
- * v1.0		  1 Mar, 2024		Bishoy Adel			    Initial Creation
+ * v1.2		  9 Mar, 2024		Bishoy Adel			    Initial Creation
 *********************************************/
 #ifndef GPIO_PRIVATE_H
 #define GPIO_PRIVATE_H
 
-
+#define		MODER_MASK				0b11
+#define		OSPEEDR_MASK			0b11
+#define		OTYPE_MASK				0b1
+#define		PIN_OFFSET				2
 
 #define		GPIOA_BASE_ADDRESS		0x40020000
 #define		GPIOB_BASE_ADDRESS		0x40020400
