@@ -228,23 +228,23 @@ void MGPIO_voidSetPinOutputSpeed(GPIO_PORT_e portID, GPIO_PIN_e pinID, GPIO_Outp
 			switch (pinOutputSpeed) {
 
 			case GPIO_LowSpeed:
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2));
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
+				CLR_BIT(GPIOB_OSPEEDR, (pinID * 2));
+				CLR_BIT(GPIOB_OSPEEDR, (pinID * 2) + 1);
 				break;
 
 			case GPIO_MediumSpeed:
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2));
+				CLR_BIT(GPIOB_OSPEEDR, (pinID * 2) + 1);
+				SET_BIT(GPIOB_OSPEEDR, (pinID * 2));
 				break;
 
 			case GPIO_HighSpeed:
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2));
+				SET_BIT(GPIOB_OSPEEDR, (pinID * 2) + 1);
+				CLR_BIT(GPIOB_OSPEEDR, (pinID * 2));
 				break;
 
 			case GPIO_VeryHighSpeed:
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2));
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
+				SET_BIT(GPIOB_OSPEEDR, (pinID * 2));
+				SET_BIT(GPIOB_OSPEEDR, (pinID * 2) + 1);
 				break;
 
 			default:
@@ -256,23 +256,23 @@ void MGPIO_voidSetPinOutputSpeed(GPIO_PORT_e portID, GPIO_PIN_e pinID, GPIO_Outp
 			switch (pinOutputSpeed) {
 
 			case GPIO_LowSpeed:
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2));
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
+				CLR_BIT(GPIOC_OSPEEDR, (pinID * 2));
+				CLR_BIT(GPIOC_OSPEEDR, (pinID * 2) + 1);
 				break;
 
 			case GPIO_MediumSpeed:
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2));
+				CLR_BIT(GPIOC_OSPEEDR, (pinID * 2) + 1);
+				SET_BIT(GPIOC_OSPEEDR, (pinID * 2));
 				break;
 
 			case GPIO_HighSpeed:
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
-				CLR_BIT(GPIOA_OSPEEDR, (pinID * 2));
+				SET_BIT(GPIOC_OSPEEDR, (pinID * 2) + 1);
+				CLR_BIT(GPIOC_OSPEEDR, (pinID * 2));
 				break;
 
 			case GPIO_VeryHighSpeed:
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2));
-				SET_BIT(GPIOA_OSPEEDR, (pinID * 2) + 1);
+				SET_BIT(GPIOC_OSPEEDR, (pinID * 2));
+				SET_BIT(GPIOC_OSPEEDR, (pinID * 2) + 1);
 				break;
 
 			default:
@@ -320,12 +320,12 @@ void MGPIO_voidSetPinValue(GPIO_PORT_e portID, GPIO_PIN_e pinID, GPIO_Value_e pi
 			switch (pinValue) {
 			// If pin value is reset
 			case GPIO_RESET:
-				SET_BIT(GPIOA_BSRR, (pinID + 16));
+				SET_BIT(GPIOB_BSRR, (pinID + 16));
 				break;
 
 			// If pin value is set
 			case GPIO_SET:
-				GPIOA_BSRR = 1 << pinID;
+				GPIOB_BSRR = 1 << pinID;
 				break;
 			}
 			break;
@@ -337,12 +337,12 @@ void MGPIO_voidSetPinValue(GPIO_PORT_e portID, GPIO_PIN_e pinID, GPIO_Value_e pi
 			// If pin value is reset
 			// If pin value is reset
 			case GPIO_RESET:
-				SET_BIT(GPIOA_BSRR, (pinID + 16));
+				SET_BIT(GPIOB_BSRR, (pinID + 16));
 				break;
 
 			// If pin value is set
 			case GPIO_SET:
-				GPIOA_BSRR = 1 << pinID;
+				GPIOB_BSRR = 1 << pinID;
 				break;
 			}
 			break;
