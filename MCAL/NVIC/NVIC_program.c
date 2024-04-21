@@ -69,5 +69,5 @@ void MNVIC_voidSetPendingFlag(u8 Copy_u8PeripheralID)
 
 void MNVIC_voidSetPeripheralPriority(u8 Copy_u8PeripheralID, u8 Copy_u8Priority)
 {
-    NVIC -> IP[Copy_u8PeripheralID] = (1 << (Copy_u8Priority << 4));
+    NVIC -> IP[Copy_u8PeripheralID] = (Copy_u8Priority << 4);
 }

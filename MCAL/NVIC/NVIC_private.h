@@ -16,19 +16,19 @@
 
 typedef struct
 {
-    volatile u32 ISER[8];
-    volatile u32 Reserved0[24];
-    volatile u32 ICER[8];
-    volatile u32 Reserved1[24];
-    volatile u32 ISPR[8];
-    volatile u32 Reserved2[24];
-    volatile u32 ICPR[8];
-    volatile u32 Reserved3[24];
-    volatile u32 IABR[8];
-    volatile u32 Reserved4[56];
-    volatile u8 IP[240];
-    volatile u32 Reserved5[580];
-    volatile u32 STIR;
+	    volatile u32 ISER[8];
+	    volatile u32 Reserved0[24];
+	    volatile u32 ICER[8];
+	    volatile u32 Reserved1[24];
+	    volatile u32 ISPR[8];
+	    volatile u32 Reserved2[24];
+	    volatile u32 ICPR[8];
+	    volatile u32 Reserved3[24];
+	    volatile u32 IABR[8];
+	    volatile u32 Reserved4[56];
+	    volatile u8 IP[240];
+	    volatile u32 Reserved5[580];
+	    volatile u32 STIR;
 }NVIC_t;
 
 #define     NVIC                    ((volatile NVIC_t *)0xE000E100)
