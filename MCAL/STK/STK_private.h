@@ -29,9 +29,9 @@ volatile u32 CTRL  ;
 volatile u32 LOAD  ;
 volatile u32 VAL   ;
 volatile u32 CALIB ;
-}STR_t;
+}STK_t;
 
-#define STK              ((volatile STR_t *)0xE000E010)
+#define STK              ((volatile STK_t*)0xE000E010)
 
 
 
