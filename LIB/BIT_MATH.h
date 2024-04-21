@@ -23,5 +23,6 @@
 #define CONC_BIT(b7,b6,b5,b4,b3,b2,b1,b0)       Conc_help(b7,b6,b5,b4,b3,b2,b1,b0)
 #define Conc_help(b7,b6,b5,b4,b3,b2,b1,b0)      0b##b7##b6##b5##b4##b3##b2##b1##b0
 
+#define NULLPTR                                 (void*)0
 
 #endif
