@@ -16,8 +16,8 @@
 
 #define STK_AHB          0
 #define STK_AHB_DIV_8    1
-#define STK_DISABLE      0
-#define STK_ENABLE       1
+#define STK_DISABLE      1
+#define STK_ENABLE       0
 
 #define STK_CLK_SRC_BIT       2
 #define STK_INT_CTRL_BIT      1
@@ -30,6 +30,9 @@ volatile u32 LOAD  ;
 volatile u32 VAL   ;
 volatile u32 CALIB ;
 }STK_t;
+
+#define SINGLE_INTERVAL       0
+#define PEROIDIC_INTERVAL     1
 
 #define STK              ((volatile STK_t*)0xE000E010)
 

@@ -93,6 +93,7 @@ void EXTI0_IRQHandler(void)
     {
         // Do Nothing
     }
+    SET_BIT(EXTI->PR,0);
 }
 
 // ISR For EXTI1
@@ -106,6 +107,7 @@ void EXTI1_IRQHandler(void)
     {
         // Do Nothing
     }
+    SET_BIT(EXTI->PR,1);
 }
 
 

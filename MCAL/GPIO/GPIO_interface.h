@@ -80,7 +80,7 @@ void MGPIO_voidSetPortMode(GPIO_PORT_e portID,GPIO_Mode_e portMODE); // Set port
 void MGPIO_voidSetPortOutputMode(GPIO_PORT_e portID,GPIO_OutputMode_e portOutputMODE); // Set port output mode
 void MGPIO_voidSetPortOutputSpeed(GPIO_PORT_e portID,GPIO_OutputSpeed_e portOutputSpeed); // Set port output speed
 void MGPIO_voidSetPortValue(GPIO_PORT_e portID,GPIO_Value_e portValue); // Set port value
-//u16 MGPIO_u8GetPortValue(GPIO_PORT_e pinID); // Get port value
+u16 MGPIO_u8GetPortValue(GPIO_PORT_e pinID); // Get port value
 void MGPIO_voidLockPort(GPIO_PORT_e pinID); // Lock port configuration
 
 #endif 

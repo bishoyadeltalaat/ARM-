@@ -15,8 +15,8 @@
 #define SYSTIK_CONFIG_H
 
 #define STK_CLK_SRC        STK_AHB_DIV_8
-#define STK_INT_CTRL       STK_DISABLE
-#define STK_CTRL           STK_ENABLE
+#define STK_INT_CTRL       STK_ENABLE
+#define STK_CTRL           STK_DISABLE
 
 
 
