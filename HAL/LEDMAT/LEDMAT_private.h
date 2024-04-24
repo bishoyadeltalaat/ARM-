@@ -8,7 +8,7 @@
  ********************************************/
 /*********************************************
  * Version	  Date				  Author				  Description
- * v1.0		  16 April, 2024	   Bishoy Adel		      Initial Creation
+ * v1.1		  16 April, 2024	   Bishoy Adel		      Initial Creation
 *********************************************/
 #ifndef LEDMAT_PRIVATE_H
 #define LEDMAT_PRIVATE_H
